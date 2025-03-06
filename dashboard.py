@@ -24,11 +24,11 @@ while True:
     latest_B = data[data["gate"] == "Gate B"]["count"].iloc[0] if not data[data["gate"] == "Gate B"].empty else 0
 
     if latest_A >= 350:
-        st.error("⚠️ Gate A is congested! Open Gate B.")
+        st.error("Gate A is congested! Open Gate B.")
     if latest_B >= 380:
-        st.error("⚠️ Gate B is congested! Open Gate A.")
+        st.error("Gate B is congested! Open Gate A.")
     if latest_A >= 350 and latest_B >= 380:
-        st.error("🚨 Warning! Both gates are overloaded. Notify authorities.")
+        st.error("Warning! Both gates are overloaded. Notify authorities.")
 
     time.sleep(5)
 
